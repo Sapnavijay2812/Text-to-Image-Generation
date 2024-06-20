@@ -8,12 +8,12 @@ This project aims to develop a text-to-image generative model that translates na
 
 To set up the environment and run the project, follow these steps:
 
-*Clone the repository to your local machine:
+* Clone the repository to your local machine:
 ```
 git clone https://github.com/your-repo/text-to-image-generation.git
 cd text-to-image-generation
 ```
-Install the required libraries and dependencies:
+* Install the required libraries and dependencies:
 ```
 !pip install --upgrade diffusers transformers -q
 
@@ -26,7 +26,7 @@ You should see output similar to this:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 28.5 MB/s eta 0:00:00
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 108.0 MB/s eta 0:00:00
 ```
-Set up your environment:
+* Set up your environment:
 
 ```
 from pathlib import Path
@@ -39,7 +39,7 @@ from transformers import pipeline, set_seed
 import matplotlib.pyplot as plt
 import cv2
 ```
-Define your configuration settings:
+* Define your configuration settings:
 ```
 class CFG:
     device = "cuda"
@@ -53,12 +53,12 @@ class CFG:
     prompt_dataset_size = 6
     prompt_max_length = 12
 ````
-*
+
 # Usage:
 
 Examples of how to use the code:
 
-Load the Stable Diffusion model:
+* Load the Stable Diffusion model:
 
 ```
 image_gen_model = StableDiffusionPipeline.from_pretrained(
@@ -68,7 +68,7 @@ image_gen_model = StableDiffusionPipeline.from_pretrained(
 image_gen_model = image_gen_model.to(CFG.device)
 ```
 
-Define the function to generate images from text prompts:
+* Define the function to generate images from text prompts:
 ```
 def generate_image(prompt, model):
     image = model(
@@ -81,7 +81,7 @@ def generate_image(prompt, model):
     return image
 ```
 
-Generate an image from a sample prompt:
+* Generate an image from a sample prompt:
 ```
 generate_image("astronaut in space", image_gen_model)
 
@@ -91,14 +91,14 @@ generate_image("astronaut in space", image_gen_model)
 
 The following libraries and dependencies are required to run this project:
 
-*diffusers
-transformers
-torch
-pandas
-numpy
-matplotlib
-tqdm
-cv2*
+* diffusers
+* transformers
+* torch
+* pandas
+* numpy
+* matplotlib
+* tqdm
+* cv2
 
 Ensure all dependencies are installed and properly configured before running the project.
 
